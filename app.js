@@ -20,7 +20,6 @@ app.ws('/', ws => {
 		// メッセージはバイト列として送られてくる
 		// デコードして文字列にする
 		const msg = e.toString('utf-8');
-		console.log('received:', msg);
 
 		// 全てのクライアントに放送する
 		expressWs.getWss().clients.forEach(client => {
