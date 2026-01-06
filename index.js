@@ -20,7 +20,7 @@ const zOff = -50;
 const ws = new WebSocket('./');
 
 /** 全ゆれ記憶バッファ */
-const yures = {};
+const yures = { };
 
 /** 表示を更新する */
 async function

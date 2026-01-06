@@ -17,7 +17,7 @@ outYureId.value = yureId;
 const ws = new WebSocket('./');
 
 /** 加速度データバッファ */
-const buf = [];
+const buf = [ ];
 
 /** センサイベントハンドラ */
 function
