@@ -110,12 +110,20 @@ ws.addEventListener('message', e => {
 
 		// 表示領域の準備
 		const h3 = document.createElement('h3');
-		h3.textContent = yureId;
+		h3.style.display = 'inline';
+		h3.textContent = yureId;	
 		const img = document.createElement('img');
 		img.setAttribute('id', `img${yureId}`);
+		const div = document.createElement('div');
+		div.append(h3);
+		if (buf[0].userAgent) {
+			const span = document.createElement('span');
+			span.textContent = ` (${buf[0].userAgent})`;
+			div.append(span);
+		}
 		const section = document.createElement('section');
 		section.setAttribute('id', yureId);
-		section.append(h3, img);
+		section.append(div, img);
 		main.append(section);
 	}
 
