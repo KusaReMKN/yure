@@ -27,6 +27,7 @@ devMotionHandler(e)
 		yureId,
 		...e.acceleration,
 		t: Date.now(),
+		userAgent: 'web client',
 	});
 	if (buf.length === 30) {
 		ws.send(JSON.stringify(buf));
