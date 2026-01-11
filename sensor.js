@@ -23,9 +23,12 @@ const buf = [ ];
 function
 devMotionHandler(e)
 {
+	const { x, y, z } = e.acceleration;
 	buf.push({
 		yureId,
-		...e.acceleration,
+		x,
+		y,
+		z,
 		t: Date.now(),
 		userAgent: 'web client',
 	});
