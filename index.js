@@ -53,24 +53,25 @@ update(yureId)
 		ctx.stroke();
 	}
 
+	const now = performance.timeOrigin + performance.now();
 	ctx.strokeStyle = 'red';
 	ctx.beginPath();
 	yures[yureId].forEach(e => {
-		ctx.lineTo((Date.now() - e.t) / tDiv, e.x * xMul + xOff);
+		ctx.lineTo((now - e.t) / tDiv, e.x * xMul + xOff);
 	});
 	ctx.stroke();
 
 	ctx.strokeStyle = 'green';
 	ctx.beginPath();
 	yures[yureId].forEach(e => {
-		ctx.lineTo((Date.now() - e.t) / tDiv, e.y * xMul + yOff);
+		ctx.lineTo((now - e.t) / tDiv, e.y * xMul + yOff);
 	});
 	ctx.stroke();
 
 	ctx.strokeStyle = 'blue';
 	ctx.beginPath();
 	yures[yureId].forEach(e => {
-		ctx.lineTo((Date.now() - e.t) / tDiv, e.z * xMul + zOff);
+		ctx.lineTo((now - e.t) / tDiv, e.z * xMul + zOff);
 	});
 	ctx.stroke();
 

@@ -29,7 +29,7 @@ devMotionHandler(e)
 		x,
 		y,
 		z,
-		t: Date.now(),
+		t: performance.timeOrigin + performance.now(),
 		userAgent: 'web client',
 	});
 	if (buf.length === 30) {
