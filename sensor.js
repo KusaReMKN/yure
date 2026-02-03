@@ -30,7 +30,7 @@ devMotionHandler(e)
 		y,
 		z,
 		t: performance.timeOrigin + performance.now(),
-		userAgent: 'web client',
+		userAgent: navigator.userAgent,
 	});
 	if (buf.length === 30) {
 		ws.send(JSON.stringify(buf));
